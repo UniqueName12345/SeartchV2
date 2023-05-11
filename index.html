@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<!-- redirect to /src/index.html -->
 <html>
-    <head>
-        <title>Redirecting...</title>
-        <meta http-equiv="refresh" content="0; url=src/index.html">
-    </head>
-    <body>
-        <h1>Redirecting...</h1>
-        <a href="src/index.html">Click here if you are not redirected.</a>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>SeartchV2 Beta</title>
+    <script src="src/search.js"></script>
+  </head>
+
+<h1>SeartchV2 Beta</h1>
+
+<p>Scratch search engine</p>
+
+<hr>
+<form>
+  <label for="searchTerm">Search term:</label>
+  <input type="text" id="search">
+</form>
+<br>
+
+<p><button onclick="projects(document.getElementById('search').value);">Search projects</button></p>
+<button onclick="studios(document.getElementById('search').value);">Search studios</button></p>
+<p><button onclick="forums(document.getElementById('search').value);">Search forums</button></p>
+<p><button onclick="wiki(document.getElementById('search').value);">Search Scratch Wiki</button></p>
+
+<s>Uses code from <a href="http://williamsmobile.co.uk/prog/search.htm">ScratchSearch+</a>, which in term uses code from Ogle</s>
 </html>
