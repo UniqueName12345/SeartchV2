@@ -13,9 +13,8 @@ async function isScratchdbUp() {
 
 function forums(thing) {
     if (isScratchdbUp()) {
-      window.open(`https://ocular.jeffalo.net/search?q=${thing}`);
+        window.open(`https://ocular.jeffalo.net/search?q=${thing}`);
     } else {
-      alert("ERROR: Can't use ocular");
+        alert("ERROR: Can't use ocular");
     }
-  }
-  
+}
