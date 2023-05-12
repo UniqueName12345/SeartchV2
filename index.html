@@ -22,15 +22,43 @@
 <br>
 
 <div>
-  <button onclick="projects(document.getElementById('search').value);">Search projects</button>
-  <select onchange="document.getElementById('search-button').onclick = this.value;">
-    <option value="projects(document.getElementById('search').value);">Projects</option>
-    <option value="studios(document.getElementById('search').value);">Studios</option>
-    <option value="forums(document.getElementById('search').value);">Forums</option>
-    <option value="wiki(document.getElementById('search').value);">Scratch Wiki</option>
+  <button onclick="searchProjects()">Search projects</button>
+  <select onchange="updateSearchFunction()">
+    <option value="searchProjects">Projects</option>
+    <option value="searchStudios">Studios</option>
+    <option value="searchForums">Forums</option>
+    <option value="searchWiki">Scratch Wiki</option>
   </select>
-  <button id="search-button" onclick="projects(document.getElementById('search').value);">Search</button>
+  <button id="search-button" onclick="">Search</button>
 </div>
+
+<script>
+  function updateSearchFunction() {
+    var select = document.getElementsByTagName("select")[0];
+    var searchButton = document.getElementById("search-button");
+    searchButton.onclick = window[select.value];
+  }
+
+
+  function searchProjects() {
+    projects(document.getElementById('search').value);
+  }
+
+  function searchStudios() {
+    studios(document.getElementById('search').value);
+  }
+
+  function searchForums() {
+    forums(document.getElementById('search').value);
+  }
+
+  function searchWiki() {
+    wiki(document.getElementById('search').value);
+  }
+
+  updateSearchFunction();
+</script>
+
 
 
 <s>Uses code from <a href="http://williamsmobile.co.uk/prog/search.htm">ScratchSearch+</a>, which in term uses code from Ogle</s> Uses own unique code now!
